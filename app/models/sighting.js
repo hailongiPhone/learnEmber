@@ -5,5 +5,8 @@ export default DS.Model.extend({
   isNew: DS.attr('boolen', {defaultValue:true}),
   createdAt: DS.attr('date', {defaultValue:new Date()}),
   numOfChildren: DS.attr('number', {defaultValue:1}),
-  // witnesses: DS.hasMany('witnesse')
+  location: DS.attr('string'),
+  sightedAt: DS.attr('date'),
+  cryptid: DS.belongsTo('cryptid'),
+  witnesses: DS.hasMany('witness')
 });
