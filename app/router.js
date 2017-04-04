@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('cryptid');
   this.route('witnesses');
   this.route('witness');
+  this.route('hailong');
 });
 
 export default Router;
