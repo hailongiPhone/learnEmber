@@ -2,9 +2,23 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
+
+  var bootstrapPath = "bower_components/bootstrap-sass/assets/"
+
   var app = new EmberApp(defaults, {
     // Add options here
+    sassOptions:{
+      includePaths:[
+        bootstrapPath + 'stylesheets'
+      ]
+
+    }
   });
+
+  //creat paths to bootstrap assets
+  //add assets to app with import
+  app.import(bootstrapPath + 'javascripts/bootstrap.js');
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
